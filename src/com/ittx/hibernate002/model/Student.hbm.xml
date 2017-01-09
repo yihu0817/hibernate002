@@ -6,6 +6,7 @@
     <class name="com.ittx.hibernate002.model.Student" table="STUDENT">
         <id name="number" type="int">
             <column name="NUMBER" />
+            <!-- java代码给主键赋值,手动生成主键值 -->
             <generator class="assigned" />
         </id>
         <property name="name" type="java.lang.String">
@@ -17,7 +18,7 @@
         <property name="sex" type="java.lang.String">
             <column name="SEX" />
         </property>
-        <property name="birthday" type="java.util.Date">
+        <property name="birthday" type="time"> <!-- date (日期)  time(时间)  timestamp(日期时间)=java.util.Date   -->
             <column name="BIRTHDAY" />
         </property>
     </class>

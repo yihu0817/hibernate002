@@ -28,7 +28,7 @@ public class StudentTest {
 		session = sessionFactory.openSession();
 		transaction = session.beginTransaction();
 	}
-
+	
 	@After
 	public void tearDown() throws Exception {
 		transaction.commit();
@@ -38,10 +38,13 @@ public class StudentTest {
 
 	@Test
 	public void testSaveStudent() {
-		Student student = new Student(1002, "张三", 18,"男",new Date());
+		Student student = new Student(1001, "小丽", 18,"男",new Date());
 		session.save(student);
 		
 //		Student student = new Student(1001, "小丽", 23,"女",new Date());
 //		session.update(student);
+		
+//		User user = new User("李四","123");
+//		session.save(user);
 	}
 }
