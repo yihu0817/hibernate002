@@ -1,7 +1,5 @@
 package com.ittx.hibernate002.model;
 
-import java.util.Date;
-
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -25,26 +23,30 @@ public class StudentTest {
 				.build();
 		// 建立SessionFactory
 		sessionFactory = config.buildSessionFactory(serviceRegistry);
-		session = sessionFactory.openSession();
+//		session = sessionFactory.openSession();
+		session = sessionFactory.getCurrentSession();
 		transaction = session.beginTransaction();
 	}
 	
 	@After
 	public void tearDown() throws Exception {
 		transaction.commit();
-		session.close();
-		sessionFactory.close();
+//		session.close();
+//		sessionFactory.close();
 	}
 
 	@Test
 	public void testSaveStudent() {
-		Student student = new Student(1001, "小丽", 18,"男",new Date());
-		session.save(student);
+//		Student student = new Student(1001, "小丽", 18,"男",new Date());
+//		session.save(student);
 		
-//		Student student = new Student(1001, "小丽", 23,"女",new Date());
+//		Student student = new Student(1001, "小明", 23,"女",new Date());
 //		session.update(student);
 		
-//		User user = new User("李四","123");
-//		session.save(user);
+//		Student student = new Student(1001, "小明", 23,"女",new Date());
+//		session.delete(student);
+		
+		User user = new User("张三","123");
+		session.save(user);
 	}
 }
