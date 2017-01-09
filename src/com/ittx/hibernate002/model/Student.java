@@ -12,6 +12,11 @@ public class Student {
 	public Student() {
 	}
 
+	public Student(String name, int age) {
+		this.name = name;
+		this.age = age;
+	}
+
 	public Student(int number, String name, int age, String sex, Date birthday) {
 		this.number = number;
 		this.name = name;
@@ -59,4 +64,12 @@ public class Student {
 	public void setBirthday(Date birthday) {
 		this.birthday = birthday;
 	}
+
+	@Override
+	public String toString() {
+		return "Student [number=" + number + ", name=" + name + ", age=" + age + ", sex=" + sex + ", birthday="
+				+ birthday + "]";
+	}
+	
+	
 }
