@@ -21,6 +21,7 @@
 		<property name="hibernate.format_sql">true</property>
 		<!-- 配置CurrentSessionContext 使用getCurrentSession()获取Session实例时 -->
 		<property name="hibernate.current_session_context_class">thread</property>
+		
 		<!-- 映射文件 -->
 		<mapping resource="com/ittx/hibernate002/model/Student.hbm.xml" />
 		<mapping resource="com/ittx/hibernate002/model/User.hbm.xml" />
