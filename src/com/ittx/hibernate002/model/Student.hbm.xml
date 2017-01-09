@@ -18,7 +18,7 @@
         <property name="sex" type="java.lang.String">
             <column name="SEX" />
         </property>
-        <property name="birthday" type="time"> <!-- date (日期)  time(时间)  timestamp(日期时间)=java.util.Date   -->
+        <property name="birthday" type="timestamp"> <!-- date (日期)  time(时间)  timestamp(日期时间)=java.util.Date   -->
             <column name="BIRTHDAY" />
         </property>
     </class>
